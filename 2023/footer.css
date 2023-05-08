@@ -1,8 +1,11 @@
+@charset 'utf-8';
+
+/* import Google Font(一時的な措置) */
+@import url('https://fonts.googleapis.com/css2?family=Klee+One:wght@600&display=swap');
+
 * {
     padding: 0;
     margin: 0;
-    /* レイアウト確認用 */
-    /* border: 1px solid black; */
 }
 
 /* cssカスタムプロパティ（必ず読み込む） */
@@ -10,29 +13,8 @@
     --theme-100: #a9a7d6;
     --theme-200: #f9e798;
 }
+
 /* end */
-
-/* 必要ないスタイリング */
-header {
-    width: 100%;
-    background: var(--theme-100);
-    font-family: 'Klee One';
-}
-
-header .header__title {
-    padding: 2rem;
-    text-align: center;
-    font-size: 2rem;
-    color: white;
-}
-
-main {
-    height: 400px;
-    width: 100%;
-    background: white;
-}
-/* end */
-
 
 /* Footer Area  */
 footer {
@@ -41,7 +23,7 @@ footer {
     padding: 30px;
     background: var(--theme-100);
     background: linear-gradient(to right bottom, var(--theme-200), 30%, var(--theme-100));
-    
+
     /* using google font */
     font-family: 'Klee One';
     color: white;
@@ -126,4 +108,5 @@ footer .copyright br {
         display: block;
     }
 }
+
 /* end Footer Area  */
