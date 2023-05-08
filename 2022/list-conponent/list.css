@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box-cont {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+}
+.box-cont .item {
+    position: relative;
+    height: 300px;
+    width: 40%;
+    margin: 1rem auto;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1rem 1rem 1rem gray;
+    text-decoration: none;
+    overflow: hidden;
+    transition: all .5s;
+    z-index: 0;
+}
+.box-cont .item:hover {
+    opacity: .8;
+}
+.box-cont .item:hover > img {
+    transform: scale(1.1);
+}
+.item .card-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: .5rem;
+    min-width: 30%;
+    width: max-content;
+    height: max-content;
+    overflow: hidden;
+    background: rgba(155, 0, 63, .75);
+    border-radius: 3px;
+    z-index: 1;
+    font-size: 1rem;
+    color: white;
+}
+.item .card-info::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f3c5";
+    color: #f88;
+    font-weight: 900;
+    font-size: 1.3rem;
+    padding-right: .5rem;
+    vertical-align: text-top;
+}
+.item img {
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all .5s;
+}
+.item h2 {
+    padding: .5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: black;
+}
+.item p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    padding: 0 .5rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    color: black;
+}
+@media screen and (max-width: 768px) {
+.box-cont .item {
+    width: 90%;
+}
+.item .card-info {
+    min-width: 70%;
+    width: max-content;
+    font-size: .8rem;
+}
+.item .card-info::before {
+    font-size: 1rem;
+}
+.item h2 {
+    font-size: 1.2rem;
+}
+}
