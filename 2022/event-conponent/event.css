@@ -1,0 +1,137 @@
+/* import Japanese font
+======================= */
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'RocknRoll One';
+}
+
+.event-area {
+    padding: 1rem 5vw;
+    width: 100%;
+}
+.events {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: .2rem .2rem .5rem gray;
+}
+.event-box {
+    position: relative;
+    display: grid;
+    grid-template: 
+    "img time" max-content 
+    "img desc" max-content 
+    / 1fr 1fr;
+    padding: .5rem;
+    margin: 3rem 0;
+    height: max-content;
+    background: white;
+    transition: all .3s;
+}
+
+.event-title {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: .5rem 1rem;
+    width: 180px;
+    height: max-content;
+    background: #9b003f;
+    color: white;
+    font-size: 1.65rem;
+    font-family: 'RocknRoll One';
+}
+.event-box .event-time {
+    grid-area: time;
+    text-align: center;
+    height: max-content;
+    padding: .5rem 1rem;
+    font-size: 2.8rem;
+    color: black;
+}
+.event-box img {
+    grid-area: img;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background: gray;
+}
+.event-box .event-description {
+    grid-area: desc;
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.count-title {
+    font-size: 2rem;
+}
+.event-description .count-down {
+    grid-area: cnt;
+    padding: .5rem;
+    height: max-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.count-down .timer {
+    display: flex;
+    background: white;
+    padding: .5rem;
+    /* border: 1px solid; */
+    border-radius: 50px;
+}
+.count-down .timer span {
+    font-size: 3rem;
+    color: #e7005e;
+}
+.event-description .goto {
+    padding: .8rem 1.5rem;
+    margin: auto 0;
+    background: #5ab5b2;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50px;
+}
+.event-description .goto:hover {
+    opacity: .8;
+}
+@media screen and (max-width: 500px) {
+.events {
+    width: 100%;
+}
+.event-box {
+    grid-template: 
+    "img" 200px 
+    "time" max-content 
+    "desc" max-content 
+    / 1fr;
+}
+.event-box .event-time {
+    padding: .5rem;
+    padding-top: 1rem;
+    font-size: 2.3rem;
+}
+.event-box .event-description {
+    padding: .5rem;
+}
+.count-title {
+    font-size: 1.5rem;
+}
+.event-description .count-down {
+}
+.count-down .timer span {
+    font-size: 1.8rem;
+}
+.count-down .timer p {
+    font-size: .5rem;
+}
+.event-description .goto {
+    font-size: 1.2rem;
+}
+}
